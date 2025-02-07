@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird Game</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      background-image: url(k-1.jpg);
+      background-size: cover;
+    }
+
+    /* Style the score container */
+    #score-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      /* Center horizontally */
+      transform: translateX(-50%);
+      /* Center horizontally */
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #333;
+      /* Text color */
+      font-weight: bold;
+      padding: 10px;
+      /* Add padding for better visibility */
+      background-color: rgba(255, 255, 255, 0.8);
+      /* Background color with transparency */
+      border-radius: 5px;
+      /* Rounded corners for a nicer look */
+    }
+
+    /* Style the score text */
+    #score {
+      font-weight: bold;
+      color: #ff5733;
+      /* Initial color for the score */
+      transition: color 0.2s ease;
+      /* Apply color transition */
+      animation: scaleUp 0.3s;
+      /* Apply the scaleUp animation */
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1);
+        /* Initial scale */
+      }
+
+      50% {
+        transform: scale(1.2);
+        /* Scale up to 1.2x size */
+      }
+
+      100% {
+        transform: scale(1);
+        /* Back to the original size */
+      }
+    }
+
+    /* Style the game menu container */
+    #gameMenu {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+    }
+
+    /* Style the play button */
+    #playButton {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="gameCanvas"></canvas>
+  <div id="score-container">
+    <span id="score">0</span>
+  </div>
+  <!-- Game Menu -->
+  <div id="gameMenu">
+
+    <button id="playButton">Play Again</button>
+  </div>
+  <!-- Include your JavaScript file -->
+  <script src="main.js"></script>
+</body>
+
+</html>
