@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 
 // Load bird image
 const birdImage = new Image();
-birdImage.src = "w.png"; // Replace with the actual path to your bird image
+birdImage.src = "images-removebg-preview (1).png"; // Replace with the actual path to your bird image
 
 // Load two pipe images
 const upperPipeImage = new Image();
